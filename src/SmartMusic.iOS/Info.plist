@@ -34,5 +34,12 @@
     <string>SmartMusic</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+
+  <key>UIAppFonts</key>
+  <array>
+    <string>Font Awesome 5 Brands-Regular-400.otf</string>
+      <string>Font Awesome 5 Free-Regular-400.otf</string>
+    <string>Font Awesome 5 Free-Solid-900.otf</string>
+</array>
 </dict>
 </plist>

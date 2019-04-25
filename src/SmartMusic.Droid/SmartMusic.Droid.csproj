@@ -101,12 +101,18 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmartMusic.Core\SmartMusic.Core.csproj">
       <Project>{24B1F185-53D2-4A12-A7D4-E854A1FE4F04}</Project>
       <Name>SmartMusic.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Font Awesome 5 Brands-Regular-400.otf" />
+    <AndroidAsset Include="Assets\Font Awesome 5 Free-Regular-400.otf" />
+    <AndroidAsset Include="Assets\Font Awesome 5 Free-Solid-900.otf" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
