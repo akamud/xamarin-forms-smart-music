@@ -6,7 +6,7 @@
   xmlns:FontAwesome="clr-namespace:FontAwesome"
   xmlns:local="clr-namespace:SmartMusic">
   <Grid>
-    <Grid.RowDefinitions>
+    <Grid.RowDefinitions> 
       <RowDefinition Height="*" />
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
@@ -14,18 +14,19 @@
     <StackLayout Grid.Row="0" BackgroundColor="#1246FF">
       <Image Margin="20,60" Source="songwave1.png" />
       <StackLayout
+        Margin="20,0"
         HeightRequest="100"
-        Orientation="Horizontal"
-        WidthRequest="200">
+        Spacing="20"
+        Orientation="Horizontal">
         <Button
-          Margin="20"
           Padding="20,10"
+          VerticalOptions="Center"
           BackgroundColor="#3661FF"
           Text="Flower language"
           TextColor="White" />
         <Button
-          Margin="0,20"
           Padding="20,10"
+          VerticalOptions="Center"
           BackgroundColor="#3661FF"
           Text="Blue"
           TextColor="White" />
