@@ -15,6 +15,13 @@ namespace SmartMusic
                    Album = "XIAPI",
                    OnFire = true,
                    Position = 1
+                },
+                new Song
+                {
+                   Name = "Dogs",
+                   Album = "Animals",
+                   OnFire = false,
+                   Position = 2
                 }
             };
         }
