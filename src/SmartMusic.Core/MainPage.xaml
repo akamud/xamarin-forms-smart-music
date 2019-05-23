@@ -10,174 +10,224 @@
             <converters:PositionToColorConverter x:Key="positionToColorConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <AbsoluteLayout>
+        <Grid AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-        <StackLayout Grid.Row="0" BackgroundColor="#1246FF">
-            <Image Margin="20,60" Source="songwave1.png" />
-            <StackLayout Margin="20,0"
-                         HeightRequest="100"
-                         Orientation="Horizontal"
-                         Spacing="20">
-                <Button Padding="20,10"
-                        BackgroundColor="#3661FF"
-                        Text="Flower language"
-                        TextColor="White"
-                        VerticalOptions="Center" />
-                <Button Padding="20,10"
-                        BackgroundColor="#3661FF"
-                        Text="Blue"
-                        TextColor="White"
-                        VerticalOptions="Center" />
-            </StackLayout>
-
-        </StackLayout>
-        <StackLayout Grid.Row="1">
-            <Frame Margin="20,0"
-                   Padding="10"
-                   BackgroundColor="White"
-                   BorderColor="Silver"
-                   CornerRadius="20"
-                   HasShadow="false">
-                <StackLayout Padding="5"
+            <StackLayout Grid.Row="0" BackgroundColor="#1246FF">
+                <Image Margin="20,60" Source="songwave1.png" />
+                <StackLayout Margin="20,0"
+                             HeightRequest="100"
                              Orientation="Horizontal"
-                             HorizontalOptions="FillAndExpand">
-                    <Image HeightRequest="80" Source="sadmask.jpg" />
-                    <StackLayout Padding="10,0"
-                                 Spacing="0"
-                                 HorizontalOptions="FillAndExpand">
-                        <StackLayout Orientation="Horizontal"
-                                     HorizontalOptions="FillAndExpand"
-                                     VerticalOptions="Center">
-                            <Label FontSize="Large"
-                                   Text="Sadsss mask"
-                                   HorizontalOptions="FillAndExpand"
-                                   VerticalOptions="Center" />
-                            <Frame Margin="0"
-                                   Padding="0"
-                                   WidthRequest="36"
-                                   HeightRequest="36"
-                                   BackgroundColor="#1246FF"
-                                   CornerRadius="18"
-                                   HasShadow="false">
-                                <Label FontFamily="{StaticResource FontAwesomeSolid}"
-                                       FontSize="Micro"
-                                       Text="{x:Static FontAwesome:FontAwesomeIcons.Pause}"
-                                       TextColor="White"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center" />
-                            </Frame>
-                        </StackLayout>
-                        <Label FontSize="Small"
-                               Text="It's raining. Where are you going?"
-                               TextColor="#AFB1C0" />
-                        <StackLayout Orientation="Horizontal">
-                            <Frame Margin="0,5"
-                                   Padding="5"
-                                   BackgroundColor="#F0F3F6"
-                                   HasShadow="false">
-                                <Label Text="1.366 M" />
-                            </Frame>
-                            <StackLayout Padding="5,0"
-                                         WidthRequest="150"
-                                         Orientation="Horizontal"
-                                         Spacing="15"
-                                         HorizontalOptions="EndAndExpand">
-                                <Label FontFamily="{StaticResource FontAwesomeSolid}"
-                                       FontSize="20"
-                                       Text="{x:Static FontAwesome:FontAwesomeIcons.Heart}"
-                                       TextColor="OrangeRed"
-                                       HorizontalOptions="EndAndExpand"
-                                       VerticalOptions="Center" />
-                                <Label FontFamily="{StaticResource FontAwesomeRegular}"
-                                       FontSize="20"
-                                       Text="{x:Static FontAwesome:FontAwesomeIcons.CommentDots}"
-                                       TextColor="Black"
-                                       HorizontalOptions="End"
-                                       VerticalOptions="Center" />
-                                <Label FontFamily="{StaticResource FontAwesomeRegular}"
-                                       FontSize="20"
-                                       Text="{x:Static FontAwesome:FontAwesomeIcons.ShareSquare}"
-                                       TextColor="Black"
-                                       HorizontalOptions="End"
-                                       VerticalOptions="Center" />
-                            </StackLayout>
-                        </StackLayout>
+                             Spacing="20">
+                    <Button Padding="20,10"
+                            BackgroundColor="#3661FF"
+                            Text="Flower language"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    <Button Padding="20,10"
+                            BackgroundColor="#3661FF"
+                            Text="Blue"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                </StackLayout>
+
+            </StackLayout>
+            <StackLayout Grid.Row="1" Padding="0,100,0,100" BackgroundColor="#FBFBFD">
+                <Frame Margin="20,20,20,0"
+                       BackgroundColor="#FBFBFD"
+                       HasShadow="false">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Label FontFamily="{StaticResource FontAwesomeRegular}"
+                               FontSize="24"
+                               Text="{x:Static FontAwesome:FontAwesomeIcons.PlayCircle}"
+                               TextColor="#1246FF"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                        <Label Text="Play All"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                        <Label FontFamily="{StaticResource FontAwesomeSolid}"
+                               FontSize="24"
+                               Text="{x:Static FontAwesome:FontAwesomeIcons.Download}"
+                               TextColor="#595D7C"
+                               HorizontalOptions="EndAndExpand"
+                               VerticalOptions="Center" />
+                        <Label FontFamily="{StaticResource FontAwesomeSolid}"
+                               FontSize="24"
+                               Text="{x:Static FontAwesome:FontAwesomeIcons.Bars}"
+                               TextColor="#595D7C"
+                               HorizontalOptions="End"
+                               VerticalOptions="Center" />
                     </StackLayout>
-                </StackLayout>
-            </Frame>
-            <Frame Margin="20"
-                   BackgroundColor="#FBFBFD"
-                   HasShadow="false">
-                <StackLayout Orientation="Horizontal" Spacing="10">
-                    <Label FontFamily="{StaticResource FontAwesomeRegular}"
-                           FontSize="24"
-                           Text="{x:Static FontAwesome:FontAwesomeIcons.PlayCircle}"
-                           TextColor="#1246FF"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
-                    <Label Text="Play All"
-                           TextColor="Black"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
-                    <Label FontFamily="{StaticResource FontAwesomeSolid}"
-                           FontSize="24"
-                           Text="{x:Static FontAwesome:FontAwesomeIcons.Download}"
-                           TextColor="#595D7C"
-                           HorizontalOptions="EndAndExpand"
-                           VerticalOptions="Center" />
-                    <Label FontFamily="{StaticResource FontAwesomeSolid}"
-                           FontSize="24"
-                           Text="{x:Static FontAwesome:FontAwesomeIcons.Bars}"
-                           TextColor="#595D7C"
-                           HorizontalOptions="End"
-                           VerticalOptions="Center" />
-                </StackLayout>
-            </Frame>
-            <StackLayout BindableLayout.ItemsSource="{Binding Songs}" Spacing="0">
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Margin="20,0"
-                                     Padding="20,5"
-                                     HeightRequest="50"
-                                     BackgroundColor="{Binding Position, Converter={StaticResource positionToColorConverter}}"
-                                     Orientation="Horizontal">
-                            <Label Text="{Binding Position}" VerticalTextAlignment="Center" />
-                            <StackLayout Margin="10,0"
-                                         Orientation="Vertical"
-                                         VerticalOptions="CenterAndExpand">
-                                <Label Text="{Binding Name}" />
-                                <StackLayout Orientation="Horizontal">
-                                    <Label FontSize="12" Text="{Binding Album}" />
+                </Frame>
+                <ScrollView>
+                    <StackLayout BindableLayout.ItemsSource="{Binding Songs}" Spacing="0">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Margin="20,0"
+                                             Padding="20,5"
+                                             HeightRequest="50"
+                                             BackgroundColor="{Binding Position, Converter={StaticResource positionToColorConverter}}"
+                                             Orientation="Horizontal">
+                                    <Label Text="{Binding Position}" VerticalTextAlignment="Center" />
+                                    <StackLayout Margin="10,0"
+                                                 Orientation="Vertical"
+                                                 VerticalOptions="CenterAndExpand">
+                                        <Label Text="{Binding Name}" />
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label FontSize="12" Text="{Binding Album}" />
+                                            <Label FontFamily="{StaticResource FontAwesomeSolid}"
+                                                   FontSize="12"
+                                                   IsVisible="{Binding OnFire}"
+                                                   Text="{x:Static FontAwesome:FontAwesomeIcons.Fire}"
+                                                   TextColor="OrangeRed"
+                                                   HorizontalOptions="End"
+                                                   VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <Label Margin="0,0,10,0"
+                                           FontFamily="{StaticResource FontAwesomeRegular}"
+                                           FontSize="20"
+                                           Text="{x:Static FontAwesome:FontAwesomeIcons.PlayCircle}"
+                                           TextColor="Gray"
+                                           HorizontalOptions="EndAndExpand"
+                                           VerticalOptions="Center" />
                                     <Label FontFamily="{StaticResource FontAwesomeSolid}"
-                                           FontSize="12"
-                                           IsVisible="{Binding OnFire}"
-                                           Text="{x:Static FontAwesome:FontAwesomeIcons.Fire}"
-                                           TextColor="OrangeRed"
+                                           FontSize="20"
+                                           Text="{x:Static FontAwesome:FontAwesomeIcons.EllipsisV}"
+                                           TextColor="Gray"
                                            HorizontalOptions="End"
                                            VerticalOptions="Center" />
                                 </StackLayout>
-                            </StackLayout>
-                            <Label Margin="0,0,10,0"
-                                   FontFamily="{StaticResource FontAwesomeRegular}"
-                                   FontSize="20"
-                                   Text="{x:Static FontAwesome:FontAwesomeIcons.PlayCircle}"
-                                   TextColor="Gray"
-                                   HorizontalOptions="EndAndExpand"
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+        <Frame Margin="20,0"
+               Padding="10"
+               AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+               AbsoluteLayout.LayoutBounds="0, 0.55,1,140"
+               BackgroundColor="White"
+               CornerRadius="20"
+               HasShadow="false">
+            <StackLayout Padding="5"
+                         Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand">
+                <Image HeightRequest="80" Source="sadmask.jpg" />
+                <StackLayout Padding="10,0"
+                             Spacing="0"
+                             HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="Center">
+                        <Label FontSize="Large"
+                               Text="Sad mask"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="Center" />
+                        <Frame Margin="0"
+                               Padding="0"
+                               WidthRequest="36"
+                               HeightRequest="36"
+                               BackgroundColor="#1246FF"
+                               CornerRadius="18"
+                               HasShadow="false">
+                            <Label FontFamily="{StaticResource FontAwesomeSolid}"
+                                   FontSize="Micro"
+                                   Text="{x:Static FontAwesome:FontAwesomeIcons.Pause}"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
                                    VerticalOptions="Center" />
+                        </Frame>
+                    </StackLayout>
+                    <Label FontSize="Small"
+                           Text="It's raining. Where are you going?"
+                           TextColor="#AFB1C0" />
+                    <StackLayout Orientation="Horizontal">
+                        <Frame Margin="0,5"
+                               Padding="5"
+                               BackgroundColor="#F0F3F6"
+                               HasShadow="false">
+                            <Label Text="1.366 M" />
+                        </Frame>
+                        <StackLayout Padding="5,0"
+                                     WidthRequest="150"
+                                     Orientation="Horizontal"
+                                     Spacing="15"
+                                     HorizontalOptions="EndAndExpand">
                             <Label FontFamily="{StaticResource FontAwesomeSolid}"
                                    FontSize="20"
-                                   Text="{x:Static FontAwesome:FontAwesomeIcons.EllipsisV}"
-                                   TextColor="Gray"
+                                   Text="{x:Static FontAwesome:FontAwesomeIcons.Heart}"
+                                   TextColor="OrangeRed"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="Center" />
+                            <Label FontFamily="{StaticResource FontAwesomeRegular}"
+                                   FontSize="20"
+                                   Text="{x:Static FontAwesome:FontAwesomeIcons.CommentDots}"
+                                   TextColor="Black"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center" />
+                            <Label FontFamily="{StaticResource FontAwesomeRegular}"
+                                   FontSize="20"
+                                   Text="{x:Static FontAwesome:FontAwesomeIcons.ShareSquare}"
+                                   TextColor="Black"
                                    HorizontalOptions="End"
                                    VerticalOptions="Center" />
                         </StackLayout>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
-    </Grid>
+        </Frame>
+
+        <Frame Margin="0"
+               Padding="0"
+               AbsoluteLayout.LayoutBounds="0,1,1,0.1"
+               AbsoluteLayout.LayoutFlags="All"
+               BorderColor="Silver"
+               CornerRadius="20">
+            <Grid Padding="20,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="25" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       Aspect="AspectFit"
+                       Source="albumpreview.jpg" />
+                <StackLayout Grid.Column="1"
+                             Margin="10,0"
+                             Orientation="Vertical">
+                    <Label Text="The back of the moon" />
+                    <Label FontSize="Small"
+                           Text="NZBZ"
+                           TextColor="Gray" />
+                </StackLayout>
+
+                <Label Grid.Column="2"
+                       FontFamily="{StaticResource FontAwesomeRegular}"
+                       FontSize="Large"
+                       Text="{x:Static FontAwesome:FontAwesomeIcons.PauseCircle}"
+                       TextColor="Blue"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                <Label Grid.Column="3"
+                       FontFamily="{StaticResource FontAwesomeSolid}"
+                       FontSize="Large"
+                       Text="{x:Static FontAwesome:FontAwesomeIcons.Music}"
+                       TextColor="Blue"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center" />
+            </Grid>
+        </Frame>
+    </AbsoluteLayout>
 </ContentPage>

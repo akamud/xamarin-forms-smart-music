@@ -22,6 +22,27 @@ namespace SmartMusic
                    Album = "Animals",
                    OnFire = false,
                    Position = 2
+                },
+                new Song
+                {
+                   Name = "Juntos e Shallow Now",
+                   Album = "Nasce uma estrela HUE-BR",
+                   OnFire = false,
+                   Position = 3
+                },
+                new Song
+                {
+                   Name = "be alone",
+                   Album = "QIQI",
+                   OnFire = false,
+                   Position = 4 
+                },
+                new Song
+                {
+                   Name = "go and have a cup of coffee",
+                   Album = "Starbucks",
+                   OnFire = false,
+                   Position = 5
                 }
             };
         }
