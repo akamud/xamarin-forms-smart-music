@@ -110,9 +110,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Font Awesome 5 Brands-Regular-400.otf" />
-    <AndroidAsset Include="Assets\Font Awesome 5 Free-Regular-400.otf" />
-    <AndroidAsset Include="Assets\Font Awesome 5 Free-Solid-900.otf" />
+    <AndroidAsset Include="Assets\FontAwesome5Brands.otf" />
+    <AndroidAsset Include="Assets\FontAwesome5Regular.otf" />
+    <AndroidAsset Include="Assets\FontAwesome5Solid.otf" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
