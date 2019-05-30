@@ -3,22 +3,60 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:FontAwesome="clr-namespace:FontAwesome"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:converters="clr-namespace:SmartMusic.Core.Converters"
-             xmlns:local="clr-namespace:SmartMusic">
+             xmlns:local="clr-namespace:SmartMusic"
+             Title="Sad Song">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:PositionToColorConverter x:Key="positionToColorConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
+    <NavigationPage.TitleView>
+        <AbsoluteLayout>
+            <Label AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"
+                   AbsoluteLayout.LayoutFlags="All"
+                   FontSize="26"
+                   HorizontalTextAlignment="Center"
+                   Text="Sad mask"
+                   TextColor="White"
+                   VerticalTextAlignment="Center" />
+            <StackLayout AbsoluteLayout.LayoutBounds="1,1,100,1"
+                         AbsoluteLayout.LayoutFlags="PositionProportional,HeightProportional"
+                         Orientation="Horizontal">
+                <Label FontFamily="{StaticResource FontAwesomeSolid}"
+                       FontSize="24"
+                       Text="{x:Static FontAwesome:FontAwesomeIcons.Headphones}"
+                       TextColor="White"
+                       HorizontalOptions="EndAndExpand"
+                       VerticalOptions="Center" />
+                <Label FontFamily="{StaticResource FontAwesomeBrands}"
+                       FontSize="24"
+                       Text="{x:Static FontAwesome:FontAwesomeIcons.BluetoothB}"
+                       TextColor="White"
+                       HorizontalOptions="EndAndExpand"
+                       VerticalOptions="Center" />
+                <Label FontFamily="{StaticResource FontAwesomeSolid}"
+                       FontSize="24"
+                       Rotation="-90"
+                       Text="{x:Static FontAwesome:FontAwesomeIcons.BatteryHalf}"
+                       TextColor="White"
+                       HorizontalOptions="EndAndExpand"
+                       VerticalOptions="Center" />
+            </StackLayout>
+        </AbsoluteLayout>
+    </NavigationPage.TitleView>
     <AbsoluteLayout>
-        <Grid AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" RowSpacing="0">
+        <Grid AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+              AbsoluteLayout.LayoutFlags="All"
+              RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="60*" />
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Row="0" BackgroundColor="#1246FF">
-                <Image Margin="20,60" Source="songwave1.png" />
+                <Image Margin="20,20,20,0" Source="songwave1.png" />
                 <StackLayout Margin="20,0"
                              HeightRequest="100"
                              Orientation="Horizontal"
@@ -36,7 +74,9 @@
                 </StackLayout>
 
             </StackLayout>
-            <StackLayout Grid.Row="1" Padding="0,100,0,100" BackgroundColor="#FBFBFD">
+            <StackLayout Grid.Row="1"
+                         Padding="0,100,0,100"
+                         BackgroundColor="#FBFBFD">
                 <Frame Margin="20,20,20,0"
                        BackgroundColor="#FBFBFD"
                        HasShadow="false">
@@ -112,15 +152,22 @@
         </Grid>
         <Frame Margin="20,0"
                Padding="10"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               AbsoluteLayout.LayoutBounds="0, 0.435,1,140"
                AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
-               AbsoluteLayout.LayoutBounds="0, 0.55,1,140"
                BackgroundColor="White"
                CornerRadius="20"
                HasShadow="false">
             <StackLayout Padding="5"
                          Orientation="Horizontal"
                          HorizontalOptions="FillAndExpand">
-                <Image HeightRequest="80" Source="sadmask.jpg" />
+                <controls:CircleImage WidthRequest="80"
+                       HeightRequest="80"
+                       Aspect="AspectFill"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Source="sadmask.jpg" />
                 <StackLayout Padding="10,0"
                              Spacing="0"
                              HorizontalOptions="FillAndExpand">
@@ -191,18 +238,18 @@
                AbsoluteLayout.LayoutFlags="All"
                BorderColor="Silver"
                CornerRadius="20">
-            <Grid Padding="20,20">
+            <Grid Padding="20,15">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="25" />
                     <ColumnDefinition Width="25" />
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"
-                       WidthRequest="50"
-                       HeightRequest="50"
-                       Aspect="AspectFit"
-                       Source="albumpreview.jpg" />
+                <controls:CircleImage Grid.Column="0"
+                                      WidthRequest="50"
+                                      HeightRequest="50"
+                                      Aspect="AspectFill"
+                                      Source="albumpreview.jpg" />
                 <StackLayout Grid.Column="1"
                              Margin="10,0"
                              Orientation="Vertical">

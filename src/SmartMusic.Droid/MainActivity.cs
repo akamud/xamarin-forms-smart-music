@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace SmartMusic.Droid
 {
@@ -22,6 +23,7 @@ namespace SmartMusic.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            ImageCircleRenderer.Init();
 
             var xfApplication = new App();
 #if DEBUG
