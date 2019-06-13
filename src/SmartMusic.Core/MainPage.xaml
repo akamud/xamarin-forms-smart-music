@@ -6,6 +6,8 @@
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:converters="clr-namespace:SmartMusic.Core.Converters"
              xmlns:local="clr-namespace:SmartMusic"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              Title="Sad Song">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -51,17 +53,17 @@
               AbsoluteLayout.LayoutFlags="All"
               RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="40*" />
+                <RowDefinition Height="42*" />
                 <RowDefinition Height="60*" />
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Row="0" BackgroundColor="#1246FF">
                 <Image Margin="20,20,20,0" Source="songwave1.png" />
-                <StackLayout Margin="20,0"
+                <StackLayout Margin="35,0"
                              HeightRequest="100"
                              Orientation="Horizontal"
                              Spacing="20">
-                    <Button Padding="20,10"
+                    <Button Padding="10,5"
                             BackgroundColor="#3661FF"
                             Text="Flower language"
                             TextColor="White"
@@ -77,7 +79,7 @@
             <StackLayout Grid.Row="1"
                          Padding="0,100,0,100"
                          BackgroundColor="#FBFBFD">
-                <Frame Margin="20,20,20,0"
+                <Frame Margin="11,20,20,0"
                        BackgroundColor="#FBFBFD"
                        HasShadow="false">
                     <StackLayout Orientation="Horizontal" Spacing="10">
@@ -114,13 +116,13 @@
                                              HeightRequest="50"
                                              BackgroundColor="{Binding Position, Converter={StaticResource positionToColorConverter}}"
                                              Orientation="Horizontal">
-                                    <Label Text="{Binding Position}" VerticalTextAlignment="Center" />
+                                    <Label Text="{Binding Position}" VerticalTextAlignment="Center" TextColor="#AFB1C0" />
                                     <StackLayout Margin="10,0"
                                                  Orientation="Vertical"
                                                  VerticalOptions="CenterAndExpand">
                                         <Label Text="{Binding Name}" />
                                         <StackLayout Orientation="Horizontal">
-                                            <Label FontSize="12" Text="{Binding Album}" />
+                                            <Label FontSize="12" TextColor="#AFB1C0" Text="{Binding Album}" />
                                             <Label FontFamily="{StaticResource FontAwesomeSolid}"
                                                    FontSize="12"
                                                    IsVisible="{Binding OnFire}"
@@ -134,13 +136,13 @@
                                            FontFamily="{StaticResource FontAwesomeRegular}"
                                            FontSize="20"
                                            Text="{x:Static FontAwesome:FontAwesomeIcons.PlayCircle}"
-                                           TextColor="Gray"
+                                           TextColor="#AFB1C0"
                                            HorizontalOptions="EndAndExpand"
                                            VerticalOptions="Center" />
                                     <Label FontFamily="{StaticResource FontAwesomeSolid}"
                                            FontSize="20"
                                            Text="{x:Static FontAwesome:FontAwesomeIcons.EllipsisV}"
-                                           TextColor="Gray"
+                                           TextColor="#AFB1C0"
                                            HorizontalOptions="End"
                                            VerticalOptions="Center" />
                                 </StackLayout>
@@ -151,10 +153,10 @@
             </StackLayout>
         </Grid>
         <Frame Margin="20,0"
-               Padding="10"
+               Padding="10, 0, 10, 0"
                HorizontalOptions="Center"
                VerticalOptions="Center"
-               AbsoluteLayout.LayoutBounds="0, 0.435,1,140"
+               AbsoluteLayout.LayoutBounds="0, 0.455,1,160"
                AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
                BackgroundColor="White"
                CornerRadius="20"
@@ -162,14 +164,23 @@
             <StackLayout Padding="5"
                          Orientation="Horizontal"
                          HorizontalOptions="FillAndExpand">
-                <controls:CircleImage WidthRequest="80"
-                       HeightRequest="80"
+                <ffimageloading:CachedImage WidthRequest="110"
+                       HeightRequest="110"
                        Aspect="AspectFill"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
-                       Source="sadmask.jpg" />
-                <StackLayout Padding="10,0"
+                       Source="sadmask.jpg" >
+                <ffimageloading:CachedImage.Transformations>
+                        <fftransformations:CornersTransformation
+                            CornersTransformType="TopLeftRounded,TopRightRounded,BottomLeftRounded,BottomRightRounded"
+                            BottomLeftCornerSize="20"
+                            TopRightCornerSize="20"/>
+                    </ffimageloading:CachedImage.Transformations>
+                </ffimageloading:CachedImage>
+    
+                <StackLayout Padding="0"
                              Spacing="0"
+                             Margin="15, 0, 0, 0"
                              HorizontalOptions="FillAndExpand">
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="FillAndExpand"
@@ -194,14 +205,17 @@
                         </Frame>
                     </StackLayout>
                     <Label FontSize="Small"
+                           Margin="0,10,0,0"
                            Text="It's raining. Where are you going?"
                            TextColor="#AFB1C0" />
                     <StackLayout Orientation="Horizontal">
-                        <Frame Margin="0,5"
-                               Padding="5"
+                        <Frame Margin="0,15"
+                               Padding="8"
                                BackgroundColor="#F0F3F6"
+                               WidthRequest="90"
                                HasShadow="false">
-                            <Label Text="1.366 M" />
+                            <Label Text="1.366 M" 
+                                   HorizontalTextAlignment="Center"/>
                         </Frame>
                         <StackLayout Padding="5,0"
                                      WidthRequest="150"
