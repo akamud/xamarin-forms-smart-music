@@ -1,31 +1,28 @@
-﻿using System;
+﻿using Prism;
+using Prism.Ioc;
+using SmartMusic.Core;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace SmartMusic
 {
-    public partial class App : Application
+    public partial class App
     {
-        public App()
+        public App() : this(null) { }
+
+        public App(IPlatformInitializer initializer) : base(initializer) { }
+
+        protected override async void OnInitialized()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(SongPage)}");
         }
 
-        protected override void OnStart()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<SongPage, SongPageViewModel>();
         }
     }
 }

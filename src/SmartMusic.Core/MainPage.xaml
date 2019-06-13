@@ -18,6 +18,7 @@
         <AbsoluteLayout>
             <Label AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"
                    AbsoluteLayout.LayoutFlags="All"
+                   Margin="-20,0,0,0"
                    FontSize="26"
                    HorizontalTextAlignment="Center"
                    Text="Sad mask"

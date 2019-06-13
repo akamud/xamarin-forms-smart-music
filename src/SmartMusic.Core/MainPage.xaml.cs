@@ -16,7 +16,6 @@ namespace SmartMusic
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new MainPageViewModel();
         }
     }
 }
