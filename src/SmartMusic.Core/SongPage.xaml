@@ -1,5 +1,33 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SmartMusic.Core.SongPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="SmartMusic.Core.SongPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#164DE7"
+             NavigationPage.HasNavigationBar="false">
+    <AbsoluteLayout>
+        <Image Source="albumartwork.jpg" />
+        <Frame Margin="20,0,20,40"
+               AbsoluteLayout.LayoutBounds="1,1,1,0.54"
+               AbsoluteLayout.LayoutFlags="All"
+               CornerRadius="20">
+            <StackLayout>
+                <Image WidthRequest="250"
+                       HeightRequest="250"
+                       Source="homepod.jpg"
+                       VerticalOptions="Start" />
+                <Image Margin="20,20,20,0" Source="songwave2.png" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Self light lamp" />
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </AbsoluteLayout>
 </ContentPage>
