@@ -26,7 +26,7 @@ namespace SmartMusic.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             ImageCircleRenderer.Init();
-
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             var xfApplication = new App();
 #if DEBUG
             HotReloader.Current.Start(xfApplication, 4291);
